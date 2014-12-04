@@ -1,0 +1,246 @@
+<!DOCTYPE html> 
+ <html lang="es"> 
+ <head> 
+	 <meta charset="utf-8"> 
+	 {% block title %}<title>triviaOnline</title>{% endblock %} 
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	 <meta name="description" content=""> 
+	 <meta name="author" content=""> 
+	 
+	 
+	 <!-- Le styles --> 
+	 <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet"> 
+	 <style type="text/css"> 
+	 body { padding-top: 60px; padding-bottom: 40px;} 
+	 </style> 
+	 <link href="{{ STATIC_URL }}css/bootstrap-responsive.css" rel="stylesheet"> 
+	 
+	 
+	 <!-- HTML5 shim, for IE6-8 support of HTML5 elements --> 
+	 <!--[if lt IE 9]> 
+	 <script src="../assets/js/html5shiv.js"></script> 
+	 <![endif]--> 
+	 
+	 
+	 <!-- Fav and touch icons --> 
+	 <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png"> 
+	 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png"> 
+	 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png"> 
+	 <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png"> 
+	 <link rel="shortcut icon" href="../assets/ico/favicon.png"> -->
+ </head> 
+ 
+ 
+   <body > 
+ 
+ 
+	 <div class="navbar navbar-inverse navbar-fixed-top"> 
+	 	<div class="navbar-inner"> 
+	 		<div class="container"> 
+	             <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> 
+	 				<span class="icon-bar"></span> 
+	 				<span class="icon-bar"></span> 
+	 				<span class="icon-bar"></span> 
+	 			 </button> 
+	 			  <a class="brand" href="/">triviaOnline</a>
+	 			   
+			 	  
+
+			 	    <div class="nav-collapse collapse"> 
+			 	     <div class="col-xs-9">	
+			 	    
+			          	<ul class="nav nav-pills"> 
+			          	
+			 				<li class="#active"><a href="registrar">Registrar Usuario</a></li>
+			 				
+			 				<!--<li><a href="#">About</a></li> 
+			 				<li>
+			 				<a href="#">Contactos</a>
+			 				</li>-->
+						 			 
+						 	<li class="#active"><a href="ingresar">Login</a></li>
+						 		{% if user.is_authenticated %}
+						 			<li><a href="/logout/">logout {{user}}</a></li>
+						 		{% else %}
+						 			<li ><a href="/login/"></a></li>
+						 		{% endif %} 
+						 			
+			 				<li class="#active"><a href="chat">chat</a></li>
+							<li class="dropdown">
+						          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu <span class="caret"></span></a>
+						          <ul class="dropdown-menu" role="menu">
+						            <li><a href="tema">Registar Temas</a></li>
+						            <li><a href="tema/add/(\d+)/">Registar Preguntas</a></li>
+						            <!--<li><a href="#">Something else here</a></li>-->
+						            <!--<li class="divider"></li>
+						            <li><a href="#">Separated link</a></li>
+						            <li class="divider"></li>
+						            <li><a href="#">One more separated link</a></li>-->
+						          </ul>
+						    </li>
+						   
+			 			 </ul>
+			 			 <!--/.nav-collapse-->
+                     </div>
+ 			 	    </div>
+			    
+	 		 </div> 
+	 	 </div> 
+	  </div> 
+	 
+ 
+	<div class="container"> 
+		 
+		 
+		 	 <!-- Main hero unit for a primary marketing message or call to action --> 
+				<div class="">
+				
+ 
+				 <h1>Bienvenidos a TriviaOnline.bo</h1>
+				
+					
+					<!--<img class="img-circle " src="{{STATIC_URL}}img/pyramid4.jpg" alt="">-->
+ 
+					 <!--<p><a href="#" class="btn btn-primary btn-large">ingresar &raquo;</a></p>-->
+
+					
+			
+		 
+
+				
+			  
+				</div>
+				<div class="">
+				
+ 
+				 <html lang="en">
+  			
+ <div class="container">
+
+      <!--  Carousel -->
+      <!--  consult Bootstrap docs at 
+            http://twitter.github.com/bootstrap/javascript.html#carousel -->
+      <div id="this-carousel-id" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="item active">
+            <a href="">  <center><img src="{{STATIC_URL}}juego/bootstrap/img/12.jpg" /></center>
+            </a>
+            <div class="carousel-caption">
+              <p><a href=""></a></p>
+            </div>
+          </div>
+          <div class="item">
+            <a href="">
+              <center><img src="{{STATIC_URL}}juego/bootstrap/img/22.jpg" /></center>
+            </a>
+            <div class="carousel-caption">
+              <p><a href=""></a></p>
+            </div>
+          </div>
+          <div class="item">
+            <a href="">
+              <center><img src="{{STATIC_URL}}juego/bootstrap/img/33.jpg"/></center>
+            </a>
+            <div class="carousel-caption">
+              <p><a href=""></a></p>
+            </div>
+          </div>
+          <div class="item">
+            <a href="">
+              <center><img src="{{STATIC_URL}}juego/bootstrap/img/44.jpg"/></center>
+            </a>
+            <div class="carousel-caption">
+              <p><a href=""></a></p>
+            </div>
+          </div>
+           <div class="item">
+            <a href="">
+              <center><img src="{{STATIC_URL}}juego/bootstrap/img/5.jpg"/></center>
+            </a>
+            <div class="carousel-caption">
+              <p><a href=""></a></p>
+            </div>
+          </div>
+           <div class="item">
+            <a href="">
+              <center><img src="{{STATIC_URL}}juego/bootstrap/img/6.jpg"/></center>
+            </a>
+            <div class="carousel-caption">
+             <p><a href=""></a></p>
+            </div>
+          </div>
+        </div><!-- .carousel-inner -->
+        <!--  next and previous controls here
+              href values must reference the id for this carousel -->
+          <a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
+          <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
+      </div><!-- .carousel -->
+      <!-- end carousel -->
+
+      <!-- Example row of columns -->
+      
+      <hr>
+
+      <footer>
+        <!--<p>By <a href="http://twitter.com/davidcochran">V.A.M</a> de <a href="http://alittlecode.com/">aLittleCode.com</a> for <a href="http://webdesign.tutsplus.com/">webdesign.tutsplus.com</a></p>-->
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+    
+    <script>window.jQuery || document.write('<script src="{{STATIC_URL}}juego/bootstrap/js/jquery-1.7.2.min.js"><\/script>')</script>
+    <!-- Bootstrap jQuery plugins compiled and minified -->
+    <script src="{{STATIC_URL}}juego/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.carousel').carousel({
+          interval: 4000
+        });
+      });
+    </script>
+
+ 
+				
+					
+					<!--<img class="img-circle " src="{{STATIC_URL}}img/pyramid4.jpg" alt="">-->
+ 
+					 <!--<p><a href="#" class="btn btn-primary btn-large">ingresar &raquo;</a></p>-->
+
+					
+			
+		 
+
+				
+			  
+				</div>
+					 
+		    	
+	</div> 
+	<!-- /container --> 
+	 	 
+                 
+ <!-- Le javascript 
+ ================================================== --> 
+ <!-- Placed at the end of the document so the pages load faster --> 
+ <!--<script src="../assets/js/jquery.js"></script>--> 
+ <script src="{{ STATIC_URL }}js/bootstrap.js"></script>
+ <script src="{{ STATIC_URL }}js/jquery-1.11.1.min.js"></script>
+ <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script> 
+ <!--<script src="../assets/js/bootstrap-alert.js"></script> 
+ <script src="../assets/js/bootstrap-modal.js"></script> 
+ <script src="../assets/js/bootstrap-dropdown.js"></script> 
+ <script src="../assets/js/bootstrap-scrollspy.js"></script> 
+ <script src="../assets/js/bootstrap-tab.js"></script> 
+ <script src="../assets/js/bootstrap-tooltip.js"></script> 
+ <script src="../assets/js/bootstrap-popover.js"></script> 
+ <script src="../assets/js/bootstrap-button.js"></script> 
+ <script src="../assets/js/bootstrap-collapse.js"></script> 
+ <script src="../assets/js/bootstrap-carousel.js"></script> 
+ <script src="../assets/js/bootstrap-typeahead.js"></script>--> 
+ 
+ 
+   </body> 
+</html> 
