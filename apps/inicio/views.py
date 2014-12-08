@@ -148,7 +148,7 @@ def user_active_view(request):
 
 def modificar_view(request):
 	menu=permisos(request)
-	u=User.8objects.get(username=request.user)
+	u=User.objects.get(username=request.user)
 	perfil=Perfil.objects.get(user=u)
 	if request.method=="POST":
 		formulario=fperfil(request.POST,request.FILES,instance=perfil)

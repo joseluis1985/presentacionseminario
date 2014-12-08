@@ -1,0 +1,31 @@
+{% extends "base1.html" %}
+
+{% block title %}
+	    <title>lista</title>
+{% endblock %}
+
+{%block container%}
+	
+	
+	{% if estado %}
+		<article id="rigth">
+				     <div class="contenedor">
+				     <h3>{{ usuario.email }}</h3>
+				     <h3>{{ usuario.perfil.pais }}</h3>
+		              <h2>{{ usuario.username }}</h2>
+		              <img src="{{usuario.perfil.avatar.url_50x50}}" alt="avatar">
+		             </div>
+		             <a href="/lista/">Volver atras</a>
+		</article>
+	{% else %}
+	<article id="rigth">
+				     <div class="contenedor">
+		              <h2>Lista de usuario</h2>
+		            
+			                {% for i in usuarios %}
+			                    <h3><li><a href="/perfil/view/{{i.id}}/"><img src="{{i.perfil.avatar.url_50x50}}" alt="avatar">{{ i.username }}</a> </li></h3>
+			                {% endfor %}
+		             </div>
+	</article>
+	{% endif %}
+{% endblock %}
